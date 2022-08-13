@@ -1,0 +1,12 @@
+.card{
+    background-color: black;
+    width: 200px;
+    height: 80px;
+    margin: 10px;
+    margin-left: 0px;
+}
+@media screen and (min-width : 0px) and (max-width : 579px){
+    .card{
+      width: 100%;
+    }
+}
