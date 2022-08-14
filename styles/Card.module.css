@@ -1,7 +1,6 @@
 .card{
     background-color: rgba(0, 0, 0, 0.39);
     width: 200px;
-    height: 80px;
     margin: 10px;
     padding: 5px;
     margin-left: 0px;
@@ -12,6 +11,10 @@
     background-color: black;
 }
 .title{
+    color: white;
+}
+.text{
+    font-size: 15px;
     color: white;
 }
 @media screen and (min-width : 0px) and (max-width : 579px){
