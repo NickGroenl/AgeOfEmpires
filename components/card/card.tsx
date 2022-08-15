@@ -6,11 +6,13 @@ import Link from 'next/link';
 
 const Card:FunctionComponent<Civilizations> = ({name, id,}) => {
     return (
-        <Link className={styles.card} href={{ pathname: '/civs', query: {id} }}>
-            <h1 className={styles.title}>
-                {name}
-            </h1> 
-        </Link>
+        <div className={styles.card}>
+            <Link href={{ pathname: '/civs', query: {id} }}>
+                <h1 className={styles.title}>
+                    {name}
+                </h1> 
+            </Link>
+        </div>
     )
 }
 
