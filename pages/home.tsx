@@ -1,17 +1,23 @@
-import {useState, useEffect} from 'react';
+// eslint-disable-next-line react-hooks/exhaustive-deps
+import {useEffect} from 'react';
 import Card from '../components/card/card';
 import Navbar from '../components/navbar/navbar';
 import fetchByName from '../resources/get';
-import { Civilizations } from '../resources/types';
 import styles from '../styles/Home.module.css';
+import {selectCivilizations, setCivilizations} from '../store/slice';
+import { useAppDispatch, useAppSelector } from "../store/hooks";
 
 
 
 const Home =() => {
-  const [civilizations, setCivilizations] = useState<Civilizations[]>();
+  const {civilizations} = useAppSelector(selectCivilizations);
+  const dispatch = useAppDispatch();
+  
   const getCivilizations = async () => {
-    const res = await fetchByName('civilizations');
-    setCivilizations(res?.civilizations);
+    if(civilizations?.length === 0){
+      const res = await fetchByName('civilizations');
+      dispatch(setCivilizations(res?.civilizations))
+    }
   }
   
   useEffect(() => {
