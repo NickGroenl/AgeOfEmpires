@@ -32,6 +32,11 @@
   z-index: 3;
   cursor: pointer;
 }
+.input{
+  border: 0px 1px 1px 0px solid grey;
+  padding: 2px !important;
+  margin-left: 10px;
+}
 @media screen and (min-width : 0px) and (max-width : 579px){
   .list{
     display: block;
