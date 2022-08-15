@@ -6,6 +6,7 @@ import fetchByName from '../resources/get';
 import styles from '../styles/Home.module.css';
 import {selectCivilizations, setCivilizations} from '../store/slice';
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import FloatButton from '../components/floatButton';
 
 
 
@@ -25,6 +26,7 @@ const Home =() => {
   }, []);
   return (
     <>
+
       <Navbar/>
       <div className='container'>
        <h1 className={styles.title}>Civilizations</h1>
@@ -39,6 +41,7 @@ const Home =() => {
        </ul>
 
       </div>
+      <FloatButton/>
     </>
   )
 }
